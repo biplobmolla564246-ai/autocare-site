@@ -488,3 +488,6 @@ body {
     grid-row: auto;
   }
 }
+.logo img {
+  height: 60px;
+}
