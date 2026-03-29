@@ -37,12 +37,12 @@ body {
   font-size: 15px;
 }
 
-.nav a:hover {
+.nav a:hover,
+.nav a.active {
   color: #ff3b30;
 }
 
 .hero {
-  position: relative;
   background: linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)), url("https://images.unsplash.com/photo-1487754180451-c456f719a1fc?auto=format&fit=crop&w=1400&q=80");
   background-size: cover;
   background-position: center;
@@ -51,8 +51,6 @@ body {
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
   max-width: 700px;
 }
 
@@ -67,13 +65,15 @@ body {
   margin-bottom: 18px;
 }
 
-.hero h1 {
+.hero h1,
+.page-banner h1 {
   font-size: 52px;
   line-height: 1.15;
   margin: 0 0 18px;
 }
 
-.hero-text {
+.hero-text,
+.page-text {
   font-size: 18px;
   line-height: 1.7;
   color: #d1d5db;
@@ -91,6 +91,8 @@ body {
   border-radius: 8px;
   font-weight: bold;
   margin-right: 12px;
+  border: 0;
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -109,6 +111,10 @@ body {
 
 .btn-dark:hover {
   background: #111827;
+}
+
+.full-btn {
+  width: 100%;
 }
 
 .features {
@@ -141,7 +147,12 @@ body {
   line-height: 1.6;
 }
 
-.services-section {
+.services-section,
+.parts-section,
+.why-us,
+.contact-preview,
+.contact-page,
+.map-section {
   padding: 80px 0;
 }
 
@@ -162,13 +173,17 @@ body {
   margin: 0;
 }
 
-.service-grid {
+.service-grid,
+.why-grid,
+.contact-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-.card {
+.card,
+.why-card,
+.contact-card {
   background: white;
   border-radius: 14px;
   padding: 28px;
@@ -176,15 +191,77 @@ body {
   border: 1px solid #ececec;
 }
 
-.card h3 {
+.card h3,
+.why-card h3,
+.contact-card h3 {
   margin-top: 0;
   margin-bottom: 12px;
 }
 
-.card p {
+.card p,
+.why-card p,
+.contact-card p {
   margin: 0;
   color: #6b7280;
   line-height: 1.6;
+}
+
+.parts-box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.parts-text,
+.parts-form,
+.contact-info-box,
+.contact-form-box {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+  border: 1px solid #ececec;
+}
+
+.parts-text h3,
+.contact-info-box h2,
+.contact-form-box h2 {
+  margin-top: 0;
+}
+
+.parts-text p {
+  color: #6b7280;
+  line-height: 1.7;
+}
+
+.check-list {
+  padding-left: 18px;
+  color: #374151;
+  line-height: 1.9;
+}
+
+.parts-form input,
+.parts-form textarea,
+.contact-form-box input,
+.contact-form-box textarea {
+  width: 100%;
+  padding: 14px 14px;
+  margin-bottom: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.parts-form textarea,
+.contact-form-box textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.why-card {
+  text-align: center;
 }
 
 .cta-section {
@@ -212,31 +289,45 @@ body {
   font-size: 30px;
 }
 
-.contact-preview {
-  padding-bottom: 70px;
+.page-banner {
+  background: linear-gradient(rgba(0,0,0,0.74), rgba(0,0,0,0.74)), url("https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&w=1400&q=80");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 90px 0;
 }
 
-.contact-grid {
+.page-space {
+  padding-top: 70px;
+}
+
+.contact-page-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 28px;
 }
 
-.contact-card {
-  background: #ffffff;
-  padding: 26px;
-  border-radius: 14px;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+.info-item {
+  margin-bottom: 22px;
 }
 
-.contact-card h3 {
-  margin-top: 0;
-  margin-bottom: 10px;
+.info-item h3 {
+  margin: 0 0 8px;
 }
 
-.contact-card p {
+.info-item p {
   margin: 0;
   color: #6b7280;
+}
+
+.map-box {
+  background: white;
+  border-radius: 16px;
+  padding: 60px 20px;
+  text-align: center;
+  color: #6b7280;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.06);
+  border: 1px solid #ececec;
 }
 
 .footer {
@@ -276,7 +367,10 @@ body {
 @media (max-width: 900px) {
   .feature-grid,
   .service-grid,
-  .contact-grid {
+  .contact-grid,
+  .why-grid,
+  .parts-box,
+  .contact-page-grid {
     grid-template-columns: 1fr;
   }
 
@@ -288,12 +382,18 @@ body {
     gap: 16px;
   }
 
-  .hero h1 {
+  .hero h1,
+  .page-banner h1 {
     font-size: 36px;
   }
 
   .nav a {
     margin-left: 0;
     margin-right: 16px;
+  }
+
+  .features {
+    margin-top: 0;
+    padding-top: 25px;
   }
 }
