@@ -52,30 +52,36 @@
       </div>
 
       <div class="contact-form-box">
-        <h2>Send a Message</h2>
-        <form>
-          <input type="text" placeholder="Your Name">
-          <input type="text" placeholder="Phone Number">
-          <input type="text" placeholder="Car Model">
-          <input type="text" placeholder="Service Needed">
-          <textarea placeholder="Write your message"></textarea>
-          <button type="submit" class="btn btn-primary full-btn">Send Message</button>
-        </form>
-      </div>
-    </div>
+  <h2>Send a Message</h2>
+  <form onsubmit="sendToWhatsApp(event)">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="text" id="phone" placeholder="Phone Number" required>
+    <input type="text" id="carModel" placeholder="Car Model">
+    <input type="text" id="serviceNeeded" placeholder="Service Needed">
+    <textarea id="message" placeholder="Write your message"></textarea>
+    <button type="submit" class="btn btn-primary full-btn">Send Message</button>
+  </form>
+</div>
   </section>
 
   <section class="map-section">
-    <div class="container">
-      <div class="section-title">
-        <p>LOCATION</p>
-        <h2>Workshop Area</h2>
-      </div>
-      <div class="map-box">
-        <p>5/2/1, Rasulbag, Mohakhali, Dhaka, Bangladesh.</p>
-      </div>
+  <div class="container">
+    <div class="section-title">
+      <p>LOCATION</p>
+      <h2>Workshop Area</h2>
     </div>
-  </section>
+    <div class="map-box">
+      <iframe
+        src="https://www.google.com/maps?q=5/2/1,%20Rasulbag,%20Mohakhali,%20Dhaka,%20Bangladesh&output=embed"
+        width="100%"
+        height="350"
+        style="border:0; border-radius:12px;"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+    </div>
+  </div>
+</section>
 
   <footer class="footer">
     <div class="container footer-wrap">
@@ -90,6 +96,27 @@
   </footer>
 
   <a class="whatsapp-btn" href="https://wa.me/8801776126774" target="_blank">WhatsApp</a>
+<script>
+  function sendToWhatsApp(event) {
+    event.preventDefault();
 
+    var name = document.getElementById("name").value;
+    var phone = document.getElementById("phone").value;
+    var carModel = document.getElementById("carModel").value;
+    var serviceNeeded = document.getElementById("serviceNeeded").value;
+    var message = document.getElementById("message").value;
+
+    var text =
+      "Hello iAutocare,%0A%0A" +
+      "Name: " + name + "%0A" +
+      "Phone: " + phone + "%0A" +
+      "Car Model: " + carModel + "%0A" +
+      "Service Needed: " + serviceNeeded + "%0A" +
+      "Message: " + message;
+
+    var whatsappURL = "https://wa.me/8801776126774?text=" + text;
+    window.open(whatsappURL, "_blank");
+  }
+</script>
 </body>
 </html>

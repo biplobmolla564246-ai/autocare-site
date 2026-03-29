@@ -115,15 +115,15 @@
         </div>
 
         <div class="parts-form">
-          <form>
-            <input type="text" placeholder="Your Name">
-            <input type="text" placeholder="Phone Number">
-            <input type="text" placeholder="Car Model">
-            <input type="text" placeholder="Required Part Name">
-            <textarea placeholder="Write details here"></textarea>
-            <button type="submit" class="btn btn-primary full-btn">Send Request</button>
-          </form>
-        </div>
+  <form onsubmit="sendPartsToWhatsApp(event)">
+    <input type="text" id="partsName" placeholder="Your Name" required>
+    <input type="text" id="partsPhone" placeholder="Phone Number" required>
+    <input type="text" id="partsCarModel" placeholder="Car Model">
+    <input type="text" id="requiredPart" placeholder="Required Part Name">
+    <textarea id="partsMessage" placeholder="Write details here"></textarea>
+    <button type="submit" class="btn btn-primary full-btn">Send Request</button>
+  </form>
+</div>
       </div>
     </div>
   </section>
@@ -192,6 +192,28 @@
   </footer>
 
   <a class="whatsapp-btn" href="https://wa.me/8801776126774" target="_blank">WhatsApp</a>
+<script>
+  function sendPartsToWhatsApp(event) {
+    event.preventDefault();
 
+    var name = document.getElementById("partsName").value;
+    var phone = document.getElementById("partsPhone").value;
+    var carModel = document.getElementById("partsCarModel").value;
+    var requiredPart = document.getElementById("requiredPart").value;
+    var message = document.getElementById("partsMessage").value;
+
+    var text =
+      "Hello iAutocare,%0A%0A" +
+      "Parts Request%0A" +
+      "Name: " + name + "%0A" +
+      "Phone: " + phone + "%0A" +
+      "Car Model: " + carModel + "%0A" +
+      "Required Part: " + requiredPart + "%0A" +
+      "Details: " + message;
+
+    var whatsappURL = "https://wa.me/8801776126774?text=" + text;
+    window.open(whatsappURL, "_blank");
+  }
+</script>
 </body>
 </html>
