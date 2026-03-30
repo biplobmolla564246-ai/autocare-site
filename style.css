@@ -701,3 +701,43 @@ textarea:focus {
     font-size: 28px;
   }
 }
+.stats {
+  background: #0b0b0f;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stat-box {
+  background: #111;
+  padding: 30px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+.stat-box h2 {
+  font-size: 32px;
+  color: #ff3b30;
+}
+
+.stat-box p {
+  color: #ccc;
+  margin-top: 10px;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
