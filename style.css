@@ -491,3 +491,22 @@ body {
 .logo img {
   height: 50px;
 }
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo img {
+  height: 45px;
+}
+
+.logo span {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+.logo-red {
+  color: #ff3b30;
+}
