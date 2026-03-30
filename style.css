@@ -436,17 +436,37 @@ body {
 }
 
 .gallery-item {
-  background: linear-gradient(135deg, #111827, #374151);
-  color: white;
-  min-height: 180px;
+  position: relative;
   border-radius: 14px;
-  display: flex;
-  align-items: end;
-  justify-content: left;
-  padding: 22px;
-  font-size: 22px;
+  overflow: hidden;
+  height: 200px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.4s;
+}
+
+.gallery-item p {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  color: white;
   font-weight: bold;
-  box-shadow: 0 8px 22px rgba(0,0,0,0.08);
+  z-index: 2;
+}
+
+.gallery-item::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
 }
 
 .about-grid {
