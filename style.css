@@ -818,3 +818,61 @@ textarea:focus {
   color: #ccc;
   font-size: 14px;
 }
+.footer {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.footer-logo-img {
+  height: 50px;
+  margin-bottom: 5px;
+  transition: 0.3s;
+}
+
+.footer-logo-img:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 8px #ff3b30);
+}
+.footer-left a {
+  background: #1a1a1a;
+  padding: 10px;
+  border-radius: 50%;
+  margin: 5px;
+  display: inline-block;
+  color: #ccc;
+  transition: 0.3s;
+}
+
+.footer-left a:hover {
+  background: #ff3b30;
+  color: white;
+  transform: translateY(-3px);
+}
+.footer-center h3 {
+  color: white;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.footer-center h3:hover {
+  color: #ff3b30;
+  text-shadow: 0 0 10px #ff3b30;
+}
+.card, .feature-box {
+  transition: 0.3s;
+}
+
+.card:hover, .feature-box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+.hero {
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.9));
+}
