@@ -769,3 +769,6 @@ textarea:focus {
   font-weight: bold;
   color: white;
 }
+.footer-logo {
+  justify-content: center;
+}
