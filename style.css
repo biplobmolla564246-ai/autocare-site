@@ -681,3 +681,23 @@ textarea:focus {
 .testimonial-card h4 {
   letter-spacing: -0.2px;
 }
+@media (max-width: 600px) {
+  .hero {
+    min-height: 72vh;
+    padding: 80px 0;
+  }
+
+  .hero-text,
+  .page-text {
+    font-size: 16px;
+  }
+
+  .btn {
+    padding: 12px 18px;
+    margin-bottom: 10px;
+  }
+
+  .section-title h2 {
+    font-size: 28px;
+  }
+}
