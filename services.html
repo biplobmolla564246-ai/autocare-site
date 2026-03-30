@@ -1,102 +1,102 @@
-/* PREMIUM SERVICE CARDS */
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services | iAutocare</title>
 
-.premium-service-card {
-  background: linear-gradient(180deg, #ffffff, #f8fafc);
-  border-radius: 22px;
-  padding: 28px;
-  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.08);
-  border: 1px solid rgba(226, 232, 240, 0.9);
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+  <link rel="stylesheet" href="style.css">
 
-.premium-service-card::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto auto 0;
-  width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, #ff3b30, #ff6a5f);
-}
+  <!-- ICON -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
 
-.premium-service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.14);
-}
+<body>
 
-.service-top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 18px;
-}
+<header>
+  <div class="container nav-container">
+    <div class="logo">
+      <img src="logo.png">
+      <span><span class="logo-red">i</span>Autocare</span>
+    </div>
 
-.service-badge {
-  width: 58px;
-  height: 58px;
-  border-radius: 16px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 59, 48, 0.1);
-  color: #ff3b30;
-  font-size: 24px;
-}
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-.service-label {
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #ff3b30;
-  background: rgba(255, 59, 48, 0.08);
-  padding: 8px 12px;
-  border-radius: 999px;
-}
+<!-- HERO -->
+<section class="services-hero">
+  <div class="container">
+    <h1>Our Premium Services</h1>
+    <p>Professional car care solutions with trusted service and genuine parts.</p>
+  </div>
+</section>
 
-.premium-service-card h3 {
-  font-size: 22px;
-  font-weight: 800;
-  margin: 0 0 14px;
-  color: #0f172a;
-}
+<!-- SERVICES -->
+<section class="services-section">
+  <div class="container service-grid">
 
-.premium-service-card p {
-  margin: 0;
-  color: #475569;
-  line-height: 1.8;
-  font-size: 15px;
-}
+    <div class="premium-service-card">
+      <i class="fa-solid fa-engine-warning service-icon"></i>
+      <h3>Engine Repair</h3>
+      <p>Complete diagnostics, overheating fix and engine performance tuning.</p>
+    </div>
 
-.service-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 22px;
-  text-decoration: none;
-  font-weight: 700;
-  color: #111827;
-  transition: color 0.25s ease, transform 0.25s ease;
-}
+    <div class="premium-service-card">
+      <i class="fa-solid fa-wind service-icon"></i>
+      <h3>AC Servicing</h3>
+      <p>Cooling check, gas refill and compressor troubleshooting.</p>
+    </div>
 
-.service-link i {
-  font-size: 13px;
-}
+    <div class="premium-service-card">
+      <i class="fa-solid fa-spray-can service-icon"></i>
+      <h3>Denting & Painting</h3>
+      <p>Scratch repair, dent fixing and premium finishing support.</p>
+    </div>
 
-.service-link:hover {
-  color: #ff3b30;
-  transform: translateX(3px);
-}
+    <div class="premium-service-card">
+      <i class="fa-solid fa-car-side service-icon"></i>
+      <h3>Brake Service</h3>
+      <p>Brake inspection and high-quality replacement support.</p>
+    </div>
 
-@media (max-width: 900px) {
-  .premium-service-card {
-    padding: 24px 20px;
-  }
+    <div class="premium-service-card">
+      <i class="fa-solid fa-oil-can service-icon"></i>
+      <h3>Oil Change</h3>
+      <p>Engine oil, filter and fluid maintenance for smooth driving.</p>
+    </div>
 
-  .service-top {
-    gap: 12px;
-    align-items: flex-start;
-    flex-direction: column;
-  }
-}
+    <div class="premium-service-card">
+      <i class="fa-solid fa-car-battery service-icon"></i>
+      <h3>Battery Support</h3>
+      <p>Battery diagnosis, charging and replacement service.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container footer-center">
+
+    <img src="logo.png" class="footer-logo">
+
+    <h3>iAutocare</h3>
+    <p>Reliable car servicing, repair and parts support.</p>
+
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+
+    <p class="copyright">© 2026 iAutocare. All rights reserved.</p>
+
+  </div>
+</footer>
+
+</body>
+</html>
