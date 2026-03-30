@@ -753,3 +753,19 @@ textarea:focus {
   opacity: 1;
   transform: translateY(0);
 }
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.footer-logo img {
+  height: 40px;
+}
+
+.footer-logo span {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+}
