@@ -510,3 +510,10 @@ body {
 .logo-red {
   color: #ff3b30;
 }
+.logo img {
+  height: 45px;
+  display: block;
+}
+.logo span:hover {
+  opacity: 0.8;
+}
