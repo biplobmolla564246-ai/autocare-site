@@ -1,37 +1,39 @@
-console.log("site loaded");
-const counters = document.querySelectorAll('.counter');
+document.addEventListener("DOMContentLoaded", function () {
+  const counters = document.querySelectorAll('.counter');
 
-counters.forEach(counter => {
-  counter.innerText = '0';
+  counters.forEach(counter => {
+    counter.innerText = '0';
 
-  const updateCounter = () => {
-    const target = +counter.getAttribute('data-target');
-    const count = +counter.innerText;
+    const updateCounter = () => {
+      const target = +counter.getAttribute('data-target');
+      const count = +counter.innerText;
+      const increment = target / 80;
 
-    const increment = target / 100;
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCounter, 25);
+      } else {
+        counter.innerText = target;
+      }
+    };
 
-    if (count < target) {
-      counter.innerText = Math.ceil(count + increment);
-      setTimeout(updateCounter, 20);
-    } else {
-      counter.innerText = target;
-    }
-  };
-
-  updateCounter();
-});
-function revealOnScroll() {
-  const reveals = document.querySelectorAll(".reveal");
-
-  reveals.forEach(el => {
-    const windowHeight = window.innerHeight;
-    const elementTop = el.getBoundingClientRect().top;
-    const revealPoint = 100;
-
-    if (elementTop < windowHeight - revealPoint) {
-      el.classList.add("active");
-    }
+    updateCounter();
   });
-}
 
-window.addEventListener("scroll", revealOnScroll);
+  function revealOnScroll() {
+    const reveals = document.querySelectorAll(".reveal");
+
+    reveals.forEach(el => {
+      const windowHeight = window.innerHeight;
+      const elementTop = el.getBoundingClientRect().top;
+      const revealPoint = 100;
+
+      if (elementTop < windowHeight - revealPoint) {
+        el.classList.add("active");
+      }
+    });
+  }
+
+  revealOnScroll();
+  window.addEventListener("scroll", revealOnScroll);
+});
