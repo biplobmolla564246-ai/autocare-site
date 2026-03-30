@@ -517,3 +517,159 @@ body {
 .logo span:hover {
   opacity: 0.8;
 }
+/* Premium UI polish */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #f3f5f9;
+}
+
+.topbar {
+  background: rgba(11, 11, 15, 0.92);
+  backdrop-filter: blur(8px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-left: 22px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  opacity: 0.85;
+}
+
+.logo {
+  transition: transform 0.25s ease;
+}
+
+.logo:hover {
+  transform: translateY(-1px);
+}
+
+.logo img {
+  height: 45px;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+}
+
+.logo span {
+  letter-spacing: 0.3px;
+}
+
+.hero {
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  animation: fadeUp 0.9s ease;
+}
+
+.tag {
+  box-shadow: 0 6px 16px rgba(255, 59, 48, 0.15);
+}
+
+.btn {
+  transition: transform 0.2s ease, box-shadow 0.25s ease, background 0.25s ease;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.14);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn-primary:hover,
+.btn-dark:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.feature-box,
+.card,
+.why-card,
+.contact-card,
+.parts-text,
+.parts-form,
+.contact-info-box,
+.contact-form-box,
+.testimonial-card,
+.about-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.feature-box:hover,
+.card:hover,
+.why-card:hover,
+.contact-card:hover,
+.parts-text:hover,
+.parts-form:hover,
+.contact-info-box:hover,
+.contact-form-box:hover,
+.testimonial-card:hover,
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-item {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px) scale(1.01);
+  opacity: 0.95;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.16);
+}
+
+input,
+textarea {
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #ff3b30;
+  box-shadow: 0 0 0 4px rgba(255, 59, 48, 0.12);
+  background: #fff;
+}
+
+.whatsapp-btn {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.whatsapp-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
+}
+
+.section-title h2,
+.hero h1,
+.page-banner h1 {
+  letter-spacing: -0.5px;
+}
+
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
