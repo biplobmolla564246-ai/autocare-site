@@ -673,3 +673,11 @@ textarea:focus {
     transform: translateY(0);
   }
 }
+.card h3,
+.feature-box h3,
+.why-card h3,
+.contact-card h3,
+.about-card h3,
+.testimonial-card h4 {
+  letter-spacing: -0.2px;
+}
