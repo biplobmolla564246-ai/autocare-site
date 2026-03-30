@@ -769,3 +769,52 @@ textarea:focus {
   font-weight: bold;
   color: white;
 }
+.footer {
+  background: #0d0d0d;
+  padding: 30px;
+  position: relative;
+}
+
+.footer-container {
+  position: relative;
+}
+
+/* LEFT SOCIAL */
+.footer-left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.footer-left a {
+  display: block;
+  margin-bottom: 10px;
+  color: #ccc;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.footer-left a:hover {
+  color: #ff3b30;
+}
+
+/* CENTER CONTENT */
+.footer-center {
+  text-align: center;
+}
+
+.footer-logo-img {
+  height: 50px;
+  margin-bottom: 5px;
+}
+
+.footer-center h3 {
+  color: white;
+  font-size: 20px;
+}
+
+.footer-center p {
+  color: #ccc;
+  font-size: 14px;
+}
