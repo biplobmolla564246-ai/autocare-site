@@ -981,44 +981,6 @@ footer {
   margin-bottom: 10px;
 }
 
-/* Social LEFT side */
-.footer-social {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.footer-social a {
-  width: 38px;
-  height: 38px;
-  background: #1e293b;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #ff3b30;
-  font-size: 16px;
-  transition: 0.3s;
-}
-
-.footer-social a:hover {
-  background: #ff3b30;
-  color: white;
-}
-
-/* Mobile fix */
-@media(max-width: 900px){
-  .footer-social {
-    position: static;
-    flex-direction: row;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-}
 /* ABOUT / SERVICES / CONTACT HERO FINAL */
 
 .page-banner,
@@ -1318,7 +1280,14 @@ img {
   font-size: 14px;
 }
 
-.social-icons a,
+.footer-social {
+  display: flex;
+  justify-content: center;   /* center করবে */
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
 .footer-social a {
   display: flex;
   align-items: center;
@@ -1327,26 +1296,16 @@ img {
   width: 40px;
   height: 40px;
 
-  margin: 0 6px;
   border-radius: 50%;
-
   background: #1e293b;
-  color: #ffffff;
+  color: #fff;
 
   font-size: 16px;
-
   transition: 0.3s ease;
 }
 
-.social-icons a i,
-.footer-social a i {
-  line-height: 1;
-}
-
-.social-icons a:hover,
 .footer-social a:hover {
   background: #ff3b30;
-  transform: translateY(-2px);
 }
 
 /* MOBILE */
