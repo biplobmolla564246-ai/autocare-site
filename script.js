@@ -37,3 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
   revealOnScroll();
   window.addEventListener("scroll", revealOnScroll);
 });
+window.addEventListener("load", function () {
+  const preloader = document.getElementById("preloader");
+  if (preloader) {
+    preloader.classList.add("hide");
+  }
+});
