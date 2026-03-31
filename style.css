@@ -1019,3 +1019,69 @@ footer {
     margin-bottom: 20px;
   }
 }
+/* ABOUT / SERVICES / CONTACT HERO FINAL */
+
+.page-banner,
+.services-hero {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
+  color: white;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.page-banner::before,
+.services-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.page-banner .container,
+.services-hero .container {
+  position: relative;
+  z-index: 2;
+}
+
+.page-banner h1,
+.services-hero h1 {
+  font-size: 42px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.page-banner .hero-text,
+.services-hero .hero-text {
+  color: #e5e7eb;
+  max-width: 700px;
+}
+
+.about-banner {
+  background: url('images/about.jpg') center/cover no-repeat;
+}
+
+.contact-banner {
+  background: url('images/contact.jpg') center/cover no-repeat;
+}
+
+.services-banner {
+  background: url('images/service.jpg') center/cover no-repeat;
+}
+
+@media (max-width: 900px) {
+  .page-banner,
+  .services-hero {
+    min-height: 260px;
+    padding: 40px 0;
+  }
+
+  .page-banner h1,
+  .services-hero h1 {
+    font-size: 30px;
+  }
+}
