@@ -1282,44 +1282,44 @@ img {
 
 .footer-social {
   display: flex;
-  justify-content: center;   /* center করবে */
+  justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   margin-top: 15px;
 }
 
 .footer-social a {
+  width: 42px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  width: 40px;
-  height: 40px;
-
   border-radius: 50%;
-  background: #1e293b;
-  color: #fff;
-
+  color: #fff !important;
+  text-decoration: none;
   font-size: 16px;
   transition: 0.3s ease;
 }
-/* Facebook */
+
 .footer-social a.facebook {
-  background: #1877f2;
+  background-color: #1877f2 !important;
 }
 
-/* YouTube */
 .footer-social a.youtube {
-  background: #ff0000;
+  background-color: #ff0000 !important;
 }
 
-/* WhatsApp */
 .footer-social a.whatsapp {
-  background: #25d366;
+  background-color: #25d366 !important;
 }
 
 .footer-social a:hover {
-  background: #ff3b30;
+  transform: translateY(-3px);
+  opacity: 0.9;
+}
+
+.footer-social a i {
+  line-height: 1;
 }
 
 /* MOBILE */
