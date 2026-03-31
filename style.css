@@ -1318,23 +1318,29 @@ img {
   font-size: 14px;
 }
 
-.social-icons,
-.footer-social {
-  margin-top: 16px;
-}
-
 .social-icons a,
 .footer-social a {
-  display: inline-block;
-  margin: 0 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 40px;
   height: 40px;
-  line-height: 40px;
-  text-align: center;
+
+  margin: 0 6px;
   border-radius: 50%;
+
   background: #1e293b;
   color: #ffffff;
-  transition: background 0.25s ease, transform 0.25s ease;
+
+  font-size: 16px;
+
+  transition: 0.3s ease;
+}
+
+.social-icons a i,
+.footer-social a i {
+  line-height: 1;
 }
 
 .social-icons a:hover,
