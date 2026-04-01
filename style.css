@@ -68,8 +68,8 @@ img {
   color: #ffffff;
 }
 
-.logo-red {
-  color: #ff3b30;
+.logo .logo-red {
+  color: #ff3b30 !important;
 }
 
 .nav a {
