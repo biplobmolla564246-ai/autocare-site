@@ -51,36 +51,42 @@
         <i class="fa-solid fa-engine-warning service-icon"></i>
         <h3>Engine Repair</h3>
         <p>Complete diagnostics, overheating fix and engine performance tuning.</p>
+		<a href="#" class="book-btn open-modal">Book Now →</a>
       </div>
 
       <div class="premium-service-card">
         <i class="fa-solid fa-wind service-icon"></i>
         <h3>AC Servicing</h3>
         <p>Cooling check, gas refill and compressor troubleshooting.</p>
+		<a href="#" class="book-btn open-modal">Book Now →</a>
       </div>
 
       <div class="premium-service-card">
         <i class="fa-solid fa-spray-can service-icon"></i>
         <h3>Denting & Painting</h3>
         <p>Scratch repair, dent fixing and premium finishing support.</p>
+		<a href="#" class="book-btn open-modal">Book Now →</a>
       </div>
 
       <div class="premium-service-card">
         <i class="fa-solid fa-car-side service-icon"></i>
         <h3>Brake Service</h3>
         <p>Brake inspection and high-quality replacement support.</p>
+		<a href="#" class="book-btn open-modal">Book Now →</a>
       </div>
 
       <div class="premium-service-card">
         <i class="fa-solid fa-oil-can service-icon"></i>
         <h3>Oil Change</h3>
         <p>Engine oil, filter and fluid maintenance for smooth driving.</p>
+		<a href="#" class="book-btn open-modal">Book Now →</a>
       </div>
 
       <div class="premium-service-card">
         <i class="fa-solid fa-car-battery service-icon"></i>
         <h3>Battery Support</h3>
         <p>Battery diagnosis, charging and replacement service.</p>
+		<a href="#" class="book-btn open-modal">Book Now →</a>
       </div>
 
     </div>
@@ -115,5 +121,24 @@
   <a class="call-btn" href="tel:+8801776126774">Call Now</a>
 
   <script src="script.js"></script>
+  
+  <!-- Booking Modal -->
+<div id="bookingModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn">&times;</span>
+
+    <h2>Book Service</h2>
+
+    <form id="bookingForm">
+      <input type="text" id="bookingName" placeholder="Your Name" required>
+      <input type="text" id="bookingPhone" placeholder="Phone Number" required>
+      <input type="text" id="bookingCarModel" placeholder="Car Model">
+      <input type="text" id="bookingService" placeholder="Service Needed">
+      <textarea id="bookingMessage" placeholder="Write details here"></textarea>
+
+      <button type="submit" class="submit-btn">Send to WhatsApp</button>
+    </form>
+  </div>
+</div>
 </body>
 </html>

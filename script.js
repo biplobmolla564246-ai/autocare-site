@@ -43,3 +43,62 @@ window.addEventListener("load", function () {
     preloader.classList.add("hide");
   }
 });
+/* ===== BOOKING MODAL + WHATSAPP ===== */
+
+const bookingModal = document.getElementById("bookingModal");
+const openModalButtons = document.querySelectorAll(".open-modal");
+const closeModalButton = document.querySelector(".close-btn");
+const bookingForm = document.getElementById("bookingForm");
+
+/* Open Modal */
+openModalButtons.forEach((btn) => {
+  btn.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (bookingModal) {
+      bookingModal.style.display = "block";
+    }
+  });
+});
+
+/* Close Button */
+if (closeModalButton) {
+  closeModalButton.addEventListener("click", function () {
+    bookingModal.style.display = "none";
+  });
+}
+
+/* Click Outside Close */
+window.addEventListener("click", function (e) {
+  if (e.target === bookingModal) {
+    bookingModal.style.display = "none";
+  }
+});
+
+/* WhatsApp Send */
+if (bookingForm) {
+  bookingForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("bookingName").value;
+    const phone = document.getElementById("bookingPhone").value;
+    const carModel = document.getElementById("bookingCarModel").value;
+    const service = document.getElementById("bookingService").value;
+    const message = document.getElementById("bookingMessage").value;
+
+    const text =
+      "Hello iAutocare,%0A%0A" +
+      "New Booking:%0A" +
+      "Name: " + name + "%0A" +
+      "Phone: " + phone + "%0A" +
+      "Car Model: " + carModel + "%0A" +
+      "Service: " + service + "%0A" +
+      "Message: " + message;
+
+    const whatsappURL = "https://wa.me/8801776126774?text=" + text;
+
+    window.open(whatsappURL, "_blank");
+
+    bookingModal.style.display = "none";
+    bookingForm.reset();
+  });
+}
