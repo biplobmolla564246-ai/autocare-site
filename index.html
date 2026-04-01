@@ -341,31 +341,6 @@
   <a class="whatsapp-btn" href="https://wa.me/8801776126774?text=Hello%20iAutocare,%20I%20need%20car%20service" target="_blank">WhatsApp</a>
   <a class="call-btn" href="tel:+8801776126774">Call Now</a>
 
-  <script>
-    function sendPartsToWhatsApp(event) {
-      event.preventDefault();
-
-      var name = document.getElementById("partsName").value;
-      var phone = document.getElementById("partsPhone").value;
-      var carModel = document.getElementById("partsCarModel").value;
-      var requiredPart = document.getElementById("requiredPart").value;
-      var message = document.getElementById("partsMessage").value;
-
-      var text =
-        "Hello iAutocare,%0A%0A" +
-        "Parts Request%0A" +
-        "Name: " + name + "%0A" +
-        "Phone: " + phone + "%0A" +
-        "Car Model: " + carModel + "%0A" +
-        "Required Part: " + requiredPart + "%0A" +
-        "Details: " + message;
-
-      var whatsappURL = "https://wa.me/8801776126774?text=" + text;
-      window.open(whatsappURL, "_blank");
-    }
-  </script>
-  <script src="script.js"></script>
-  
   <!-- Booking Modal -->
 <div id="bookingModal" class="modal">
   <div class="modal-content">
@@ -384,5 +359,6 @@
     </form>
   </div>
 </div>
+  <script src="script.js"></script>
 </body>
 </html>
