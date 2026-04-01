@@ -1056,3 +1056,39 @@ img {
     width: 100%;
   }
 }
+.service-card {
+  transition: 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+.service-card .feature-icon {
+  transition: 0.3s;
+}
+
+.service-card:hover .feature-icon {
+  transform: scale(1.2) rotate(5deg);
+  background: #ff3b30;
+  color: #fff;
+}
+.service-card {
+  border-top: 3px solid transparent;
+  background: linear-gradient(#fff, #fff) padding-box,
+              linear-gradient(90deg, #ff3b30, #ff6a3d) border-box;
+}
+.book-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #ff3b30;
+  color: #fff;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.book-btn:hover {
+  background: #e12e26;
+}
