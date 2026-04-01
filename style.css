@@ -68,7 +68,8 @@ img {
   color: #ffffff;
 }
 
-.logo .logo-red {
+.logo .logo-red,
+.footer .logo-red{
   color: #ff3b30 !important;
 }
 
