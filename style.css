@@ -1621,3 +1621,14 @@ body {
     border-radius: 18px;
   }
 }
+@media (max-width: 768px) {
+  .service-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+  }
+
+  .service-grid .card {
+    min-width: 80%;
+  }
+}
